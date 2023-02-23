@@ -25,10 +25,10 @@ method-specs è il valore associato). Il formato scelto per le classi è il
 seguente ((parents) ((K . V)*)) ovvero una lista, avente
 come primo elemento una lista di parents seguita da una association list,
 ovvero una lista di cons-cells rappresentante le varie coppie chiave-valore.
-A differenza di quanto sperimentato per Prolog, qui non vi sono vincoli
-sulla ridefinizioni delle classi. Bisogna comunque tenere in considerazione
-lo stato inconsistente in cui si troverà il sistema ed, in particolare, 
-le istanze se esse non vengono a loro volta ridefinte.
+Non vi sono vincoli sulla ridefinizioni delle classi. Bisogna comunque 
+tenere in considerazione lo stato inconsistente in cui si troverà il 
+sistema ed, in particolare, le istanze se esse non vengono a loro volta 
+ridefinte.
 
 
 
@@ -47,8 +47,8 @@ all'atto della create si scansiona la lista di parents
 (l'ordine conta) e si eredita l'attributo/metodo eventualmente presente 
 in più classi solo dalla prima utile. Per le istanze, il formato scelto
 è il seguente: (oolinst class-name (K . V)* ).
-In analogia a quanto fatto con Prolog, il codice non previene che si
-possano, volendo, ridefinire dei metodi ereditati dalle classi.
+Il codice non previene che si possano, volendo, ridefinire dei metodi 
+ereditati dalle classi.
 
 
 > << - (instance slot-name) 
@@ -69,7 +69,7 @@ Estrae il valore da una classe percorrendo una catena di attributi.
 Richiamata dalla build-pairs quando questa individua il pattern di un
 metodo. Crea una funzione anonima che si preoccupi di recuperare 
 il codice vero e proprio del metodo nell’istanza (sfrutta <<), e 
-di chiamarlo con tutti gli argomenti del caso. INfine associa la 
+di chiamarlo con tutti gli argomenti del caso. Infine associa la 
 suddetta lambda al nome del metodo.
 
 > rewrite-method (method-spec)
